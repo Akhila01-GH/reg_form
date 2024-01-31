@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+
+    <h1 style="font-size: 36px; margin-bottom: 20px;">Registration Form</h1>
+
+    <form action="/register" method="post" style="text-align: center; width: 300px; margin: auto;">
+        <label for="username" style="font-size: 22px;">Username:</label><br>
+        <input type="text" id="username" name="username" required style="font-size: 17px;"><br><br>
+
+        <label for="email" style="font-size: 22px;">Email:</label><br>
+        <input type="email" id="email" name="email" required style="font-size: 17px;"><br><br>
+
+        <label for="phone" style="font-size: 22px;">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required style="font-size: 17px;"><br><br>
+
+        <label for="password" style="font-size: 22px;">Password:</label><br>
+        <input type="password" id="password" name="password" required style="font-size: 17px;"><br><br>
+
+        <label for="gender" style="font-size: 22px;">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male" style="font-size: 18px;">Male</label>
+        
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female" style="font-size: 18px;">Female</label>
+        
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other" style="font-size: 18px;">Other</label><br><br><br>
+
+        <button type="submit" style="font-size: 25px;">Register</button>
+    </form>
+</body>
+</html>
